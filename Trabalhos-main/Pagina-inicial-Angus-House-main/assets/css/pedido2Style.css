@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.pagina{
+    background: linear-gradient(rgb(255, 217, 0), rgb(0, 0, 0));
+    display: table;
+    width: 100%;
+    height: 110%;
+    padding: 100px 0;
+    background-size: cover;
+}
+
+.letras{
+  color: white;
+}
+
+.mapa{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 20px;
+    background-color: #f3f3f3;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #4caf50;
+    transition: width 0.5s;
+  }
+  
+  .titulo{
+    color: #fff;
+    background-color: #000;
+    border-radius: 16px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 35%;
+    left: 40%;
+    margin-bottom: 30px;
+    display: inline-block; /* Adicione esta linha */
+    padding: 10px; /* Adicione padding se necessário */
+  }
+  .formulario2{
+    background: linear-gradient(rgb(0, 0, 0), rgb(37, 37, 37));
+    color: #fff;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 30%;
+    border-radius: 16px;
+    padding: 8%;
+    left: 25%;
+  }
+
+    .formulario2 input{
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: none;
+    }
+
+    .formulario2 button{
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: none;
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+    }
+        
+    .formulario2 button:hover {
+      background-color: #45a049;
+    }
+    
+    .formulario2 button:focus {
+      outline: none;
+    }

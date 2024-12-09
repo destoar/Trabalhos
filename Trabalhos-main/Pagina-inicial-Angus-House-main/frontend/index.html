@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angus House</title>
+    <!-- Estilo local -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Bootstrap CSS (Versão 4.1.3) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+          crossorigin="anonymous">
+</head>
+<body id="principal">
+    <header class="cabecalho">
+        <h1 class="logo">ANGUS HOUSE</h1>
+        <nav id="menu">
+            <ul class="fonteCabecalho">
+                <li><img class="home" src="../assets/img/home.png" alt=""><a href="index.html">Página inicial</a></li>
+                <li><img class="lanche" src="../assets/img/lanche.png" alt=""><a href="lanches.html">Lanches</a></li>
+                <li><img class="bebida" src="../assets/img/bebida.png" alt=""><a href="bebidas.html">Bebidas</a></li>
+                <li><img class="sobremesa" src="../assets/img/sobremesa.png" alt=""><a href="sobremesa.html">Sobremesas</a></li>
+                <li><img class="porcao" src="../assets/img/porcao.png" alt=""><a href="porcao.html">Porções</a></li>
+                <li><img class="cupom" src="../assets/img/cupom.png" alt=""><a href="cupom.html">Cupons</a></li>
+                <li><img class="carrinho" src="../assets/img/icons8-buying-32.png" alt=""><a href="pedido.html">Pedido</a></li>
+                <li><img class="login" src="../assets/img/icons8-login-24.png" alt=""><a href="login.html" id="loginLink">Login</a></li>
+                <!-- O ícone de perfil aparecerá apenas se o usuário estiver logado -->
+                <li><img class="perfil" src="../assets/img/perfil.png" alt=""><a href="perfil.html" id="perfilLink" style="display: none;">Perfil</a></li>
+                <li><a href="javascript:void(0);" id="logout" style="display: none;">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main">
+        <h1 class="titulo">PROMOÇÃO DA SEMANA</h1>
+        <h1 class="titulo2">HAMBÚRGUERES <span style="color: yellow; padding: 15px;">ANGUS</span></h1>
+        
+        <p class="textoPromocao"> Durante toda a semana, todos os hambúrgueres ANGUS <br>
+            <span style="padding-left: 25px;">estarão com 15% de desconto (combos incluídos).</span> <br>
+            <span style="padding-left: 130px;">Peça agora no delivery!</span></p>
+        
+        <div id="carouselExampleSlidesOnly" class="carousel-slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="img1" src="../assets/img/hamburguer1.png" alt="Primeiro Slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="img2" src="../assets/img/hamburguer2.png" alt="Segundo Slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="img3" src="../assets/img/hamburguer3.png" alt="Terceiro Slide">
+                </div>
+            </div>
+        </div>
+
+        <div class="mesa">
+            <img src="../assets/img/MESA.png" alt="Imagem de uma mesa">
+        </div>
+
+        <button class="botaoPeca">Peça agora!</button>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> <!-- Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> <!-- Bootstrap JS -->
+    <script src="../assets/js/script.js"></script> <!-- Seu script personalizado -->
+
+    <script>
+        $(document).ready(function () {
+            // Verificar se o usuário está logado
+            const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
+
+            if (usuarioLogado) {
+                // Se o usuário estiver logado, exibe o ícone de perfil e o link de logout
+                $("#perfilLink").show(); // Exibe o link do perfil
+                $(".perfil").show(); // Exibe o ícone de perfil
+                $("#logout").show(); // Exibe o link de logout
+                $("#loginLink").hide(); // Esconde o link de login
+            } else {
+                // Se não estiver logado, exibe o link de login
+                $("#perfilLink").hide(); // Esconde o link do perfil
+                $(".perfil").hide(); // Esconde o ícone de perfil
+                $("#logout").hide(); // Esconde o link de logout
+                $("#loginLink").show(); // Exibe o link de login
+            }
+
+            // Logout
+            $("#logout").on("click", function () {
+                // Remove o usuário logado do localStorage
+                localStorage.removeItem("usuarioLogado");
+                alert("Você foi desconectado.");
+                // Atualiza a página para refletir as mudanças
+                window.location.reload();
+            });
+        });
+    </script>
+</body>
+</html>

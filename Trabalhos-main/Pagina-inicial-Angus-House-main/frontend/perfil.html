@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="logo">ANGUS HOUSE</h1>
+        <nav id="menu">
+            <ul class="fonteCabecalho">
+                <li><a href="index.html">Página inicial</a></li>
+                <li><a href="pedido.html">Pedidos</a></li>
+                <li><a href="javascript:void(0);" id="logout">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main">
+        <h2>Perfil de <span id="nomeUsuarioPerfil"></span></h2>
+        <p><strong>E-mail:</strong> <span id="emailUsuarioPerfil"></span></p>
+        <button id="editarPerfil" class="btn btn-primary">Editar Perfil</button>
+        <button id="logoutPerfil" class="btn btn-danger">Sair</button>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Verificar se o usuário está logado
+            const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
+
+            if (usuarioLogado) {
+                // Exibe as informações do usuário
+                $("#nomeUsuarioPerfil").text(usuarioLogado.nome);
+                $("#emailUsuarioPerfil").text(usuarioLogado.email);
+            } else {
+                // Caso não tenha usuário logado, redireciona para o login
+                window.location.href = "login.html";
+            }
+
+            // Logout
+            $("#logoutPerfil").on("click", function () {
+                // Limpa o localStorage e redireciona para a página de login
+                localStorage.removeItem("usuarioLogado");
+                window.location.href = "login.html"; // Redireciona para a página de login
+            });
+        });
+    </script>
+</body>
+</html>
+

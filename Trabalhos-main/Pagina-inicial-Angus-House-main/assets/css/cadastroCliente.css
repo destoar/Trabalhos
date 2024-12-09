@@ -1,0 +1,44 @@
+/* Fundo preto para o corpo e todo o conteúdo */
+body, html {
+    background-color: #000; /* Fundo preto */
+    color: #FFE600; /* Texto amarelo */
+    height: 100%; /* Garante que o fundo ocupe toda a altura */
+    margin: 0;
+    padding: 0;
+}
+
+/* Fundo preto para a seção principal */
+.main {
+    background-color: #000 !important; /* Força o fundo preto */
+    color: #FFE600;
+    padding: 20px;
+    min-height: 100vh; /* Garante que ocupe toda a altura da viewport */
+}
+
+/* Fundo preto dentro do formulário */
+.cadastro-container {
+    background-color: #ffffff; /* Fundo preto-escuro do formulário */
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Campos do formulário com fundo escuro */
+.form-control {
+    background-color: #333 !important; /* Fundo escuro no campo */
+    border: 1px solid #555; /* Borda escura */
+    color: #FFE600; /* Texto amarelo */
+}
+
+.form-control:focus {
+    border-color: #FFE600; /* Borda amarela ao focar */
+    background-color: #444; /* Fundo mais claro ao focar */
+}
+
+/* Fundo preto para qualquer elemento branco restante */
+section, div, form {
+    background-color: #000 !important; /* Força o fundo preto em qualquer elemento genérico */
+    color: #FFE600;
+}

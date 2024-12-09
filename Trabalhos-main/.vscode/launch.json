@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Abrir index.html no Chromium",
+            "file": "/home/gustavo/Downloads/Trabalhos-main/Pagina-inicial-Angus-House-main/frontend/index.html",
+            "runtimeExecutable": "/snap/bin/chromium",
+            "runtimeArgs": [
+                "--remote-debugging-port=9222"
+            ],
+            "webRoot": "/home/gustavo/Downloads/Trabalhos-main/Pagina-inicial-Angus-House-main/frontend"
+        }
+    ]
+}
+

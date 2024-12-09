@@ -1,0 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@1,300&family=Reenie+Beanie&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --Lanches:"K2D";
+    --textol: "Reenie beanie"
+}
+
+.sub{
+    color: #FFF;
+    font-family: var(--Lanches);
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+.padrão{
+    background-image: url(../img/fundo-riscado-abstrato-com-um-efeito-do-grunge.png);
+    background-size: cover;
+}
+.container-top,
+.container-bottom {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; 
+    margin-bottom: 20px; 
+}
+
+.container-top > div,
+.container-bottom > div {
+    text-align: center; 
+}
+
+.allimg {
+    width: 206px;
+    height: 196px; 
+}
+
+.NomeH{
+    color: #FFF500;
+    font-family: "Reenie Beanie";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.paragrafos{
+    color: #FFF;
+    text-align: center;
+    font-family: "Reenie Beanie";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.botão{
+    border-radius: 10px;
+    width: 62px;
+    height: 32.667px;
+    flex-shrink: 0;    
+    background: #FFE600;
+    font-family: "K2D";
+    cursor: pointer;
+}
+.botão:hover{
+    background-color: #dbc605e3;
+}
